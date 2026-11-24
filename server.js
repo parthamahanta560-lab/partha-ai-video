@@ -13,7 +13,12 @@ const ALLOWED_MODELS = (process.env.ALLOWED_MODELS || "fal-ai/veo3.1")
 app.get("/", (req, res) => {
   res.json({ service: "PARTHA AI VIDEO Backend", status: "online" });
 });
-
+app.get("/v1/health", (req, res) => {
+  res.json({
+    status: "ok",
+    service: "PARTHA AI VIDEO Backend"
+  });
+});
 // Simple app-token protection
 function checkAuth(req, res, next) {
   if (!APP_TOKEN || req.headers.authorization !== `Bearer ${APP_TOKEN}`) {
