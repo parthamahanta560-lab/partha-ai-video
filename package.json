@@ -2,6 +2,7 @@
 {
   "name": "partha-ai-video",
   "version": "1.0.0",
+  "type": "module",
   "description": "PARTHA AI Video Generation Server",
   "main": "server.js",
   "scripts": {
